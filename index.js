@@ -45,7 +45,7 @@ server.listen(11111,function () {
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-mongoose.connect("mongodb://test:test@ds017672.mlab.com:17672/graph");
+mongoose.connect("mongodb://#");
 var db = mongoose.connection;
 db.once("open",function () {
   console.log("DB connected");
